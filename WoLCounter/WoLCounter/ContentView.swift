@@ -13,7 +13,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack(spacing: 1){
-                Image("appName").padding()
+                Image("appName").padding(.top, -50)
+                Spacer()
                 //Navigate to Single Player screen
                 NavigationLink(destination:PlayerView(score: score()).navigationBarHidden(true))
                 {Image("buttonPlayers").playerButtonStyle(with:"Player 1")
@@ -30,9 +31,10 @@ struct ContentView: View {
                 NavigationLink(destination: Player4View(score: score()).navigationBarHidden(true)){
                     Image("buttonPlayers").playerButtonStyle(with: "Player 4")
                     }
+                Spacer()
 
                     //Link(destination: URL) {
-                Image("appLogo").padding(.bottom, 90).padding(.top, 30)
+                Image("appLogo").padding(.top, 50)
                     //}
                 Spacer()
                     
